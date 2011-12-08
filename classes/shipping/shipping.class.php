@@ -26,7 +26,7 @@ class woocommerce_shipping {
 		do_action('woocommerce_shipping_init');
 		
 		$load_methods = apply_filters('woocommerce_shipping_methods', array());
-		
+
 		foreach ($load_methods as $method) :
 		
 			$this->shipping_methods[] = &new $method();
